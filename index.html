@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah El-Deeb | Personal Portfolio</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#8b5cf6',
+                        darkBg: '#0f172a',
+                        cardDark: '#1e293b'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Glowing Text Effect */
+        .text-gradient {
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-blue-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-slate-800/80 px-4 lg:px-12 py-4 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Brand / Name -->
+            <a href="#" class="text-xl md:text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-blue-500 animate-pulse"></span>
+                <span>Abdullah <span class="text-gradient">El-Deeb</span></span>
+            </a>
+
+            <!-- Nav Links (English Only, No Language Toggle) -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+                <a href="#friends" class="hover:text-blue-400 transition-colors">Friends</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-36 pb-20 px-4 lg:px-12 max-w-7xl mx-auto w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-20 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+        <!-- Left Content (Text & Socials) -->
+        <div class="flex-1 text-center md:text-left space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Software Developer & Content Creator</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white">
+                Hi, I'm 
+                <span class="text-gradient">Jojan</span>
+            </h1>
+
+            <p class="text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed mx-auto md:mx-0">
+                Passionate about web engineering and modern digital experiences. I focus on building fast, elegant, and user-centric web applications.
+            </p>
+
+            <!-- Social Links (Ready for customization) -->
+            <div class="flex items-center justify-center md:justify-start gap-3 flex-wrap pt-2">
+                <a href="https://github.com/abdalla3000" target="_blank" class="w-10 h-10 rounded-xl bg-slate-800/80 hover:bg-blue-600 hover:text-white text-slate-300 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 shadow-lg border border-slate-700/60" title="GitHub">
+                    <i class="fa-brands fa-github text-lg"></i>
+                </a>
+                <a href="https://x.com/johanliebe95853" target="_blank" class="w-10 h-10 rounded-xl bg-slate-800/80 hover:bg-slate-700 hover:text-white text-slate-300 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 shadow-lg border border-slate-700/60" title="Twitter / X">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="https://www.tiktok.com/@abdalla_hassan.1" target="_blank" class="w-10 h-10 rounded-xl bg-slate-800/80 hover:bg-black hover:text-white text-slate-300 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 shadow-lg border border-slate-700/60" title="TikTok">
+                    <i class="fa-brands fa-tiktok text-lg"></i>
+                </a>
+                <a href="https://www.tiktok.com/@abdalla_hassan.1?is_from_webapp=1&sender_device=pc" target="_blank" class="w-10 h-10 rounded-xl bg-slate-800/80 hover:bg-blue-600 hover:text-white text-slate-300 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 shadow-lg border border-slate-700/60" title="Facebook">
+                    <i class="fa-brands fa-facebook-f text-lg"></i>
+                </a>
+                <a href="https://www.instagram.com/abdullah_v5.0/" target="_blank" class="w-10 h-10 rounded-xl bg-slate-800/80 hover:bg-rose-600 hover:text-white text-slate-300 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 shadow-lg border border-slate-700/60" title="Instagram">
+                    <i class="fa-brands fa-instagram text-lg"></i>
+                </a>
+                <a href="https://discord.com/users/1116426022984892426" target="_blank" class="w-10 h-10 rounded-xl bg-slate-800/80 hover:bg-indigo-600 hover:text-white text-slate-300 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 shadow-lg border border-slate-700/60" title="Discord">
+                    <i class="fa-brands fa-discord text-lg"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Content (Profile Image Container) -->
+        <div class="relative flex-1 flex justify-center items-center">
+            <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl p-2 bg-gradient-to-tr from-blue-500 via-indigo-500 to-purple-500 shadow-2xl">
+                <div class="w-full h-full rounded-2xl bg-slate-900 overflow-hidden relative flex items-center justify-center">
+                    <img src="MPP.jpeg" alt="Abdullah El-Deeb" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 px-4 lg:px-12 max-w-7xl mx-auto w-full">
+        <div class="text-center md:text-left mb-12">
+            <h2 class="text-3xl font-bold text-white mb-2">Technologies & Skills</h2>
+            <p class="text-slate-400 text-sm sm:text-base">Languages, frameworks, and tools I work with</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="glass-card rounded-2xl p-6 flex items-center gap-4 transition-all duration-300 hover:-translate-y-1">
+                <i class="fa-brands fa-html5 text-3xl text-orange-500"></i>
+                <div>
+                    <h4 class="font-bold text-white">HTML5</h4>
+                    <p class="text-xs text-slate-400">Semantic Web</p>
+                </div>
+            </div>
+            <div class="glass-card rounded-2xl p-6 flex items-center gap-4 transition-all duration-300 hover:-translate-y-1">
+                <i class="fa-brands fa-css3-alt text-3xl text-blue-500"></i>
+                <div>
+                    <h4 class="font-bold text-white">CSS3 / Tailwind</h4>
+                    <p class="text-xs text-slate-400">Styling & Layouts</p>
+                </div>
+            </div>
+            <div class="glass-card rounded-2xl p-6 flex items-center gap-4 transition-all duration-300 hover:-translate-y-1">
+                <i class="fa-brands fa-js text-3xl text-yellow-400"></i>
+                <div>
+                    <h4 class="font-bold text-white">JavaScript</h4>
+                    <p class="text-xs text-slate-400">Interactive Logic</p>
+                </div>
+            </div>
+            <div class="glass-card rounded-2xl p-6 flex items-center gap-4 transition-all duration-300 hover:-translate-y-1">
+                <i class="fa-brands fa-git-alt text-3xl text-red-500"></i>
+                <div>
+                    <h4 class="font-bold text-white">Git & GitHub</h4>
+                    <p class="text-xs text-slate-400">Version Control</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-4 lg:px-12 max-w-7xl mx-auto w-full">
+        <div class="text-center md:text-left mb-12">
+            <h2 class="text-3xl font-bold text-white mb-2">Featured Projects</h2>
+            <p class="text-slate-400 text-sm sm:text-base">Explore some of my recent web applications and work</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Project Card 1 -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group transition-all duration-300">
+                <div class="p-6 space-y-3">
+                    <div class="flex justify-between items-center">
+                        <i class="fa-solid fa-folder-open text-2xl text-blue-400"></i>
+                        <div class="flex gap-3">
+                            <a href="#" target="_blank" class="text-slate-400 hover:text-white transition-colors" title="GitHub Repository"><i class="fa-brands fa-github text-lg"></i></a>
+                            <a href="#" target="_blank" class="text-slate-400 hover:text-white transition-colors" title="Live Preview"><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">Personal Portfolio</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">A modern, fully responsive personal portfolio designed with glassmorphism and clean architecture.</p>
+                </div>
+                <div class="px-6 pb-6 pt-2 flex flex-wrap gap-2 text-xs font-mono text-blue-300">
+                    <span class="px-2.5 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">HTML</span>
+                    <span class="px-2.5 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">Tailwind</span>
+                    <span class="px-2.5 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">JavaScript</span>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group transition-all duration-300">
+                <div class="p-6 space-y-3">
+                    <div class="flex justify-between items-center">
+                        <i class="fa-solid fa-folder-open text-2xl text-purple-400"></i>
+                        <div class="flex gap-3">
+                            <a href="#" target="_blank" class="text-slate-400 hover:text-white transition-colors" title="GitHub Repository"><i class="fa-brands fa-github text-lg"></i></a>
+                            <a href="#" target="_blank" class="text-slate-400 hover:text-white transition-colors" title="Live Preview"><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">Task Management App</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">An interactive task organizer web application featuring real-time state persistence and filters.</p>
+                </div>
+                <div class="px-6 pb-6 pt-2 flex flex-wrap gap-2 text-xs font-mono text-purple-300">
+                    <span class="px-2.5 py-1 rounded-md bg-purple-500/10 border border-purple-500/20">JavaScript ES6</span>
+                    <span class="px-2.5 py-1 rounded-md bg-purple-500/10 border border-purple-500/20">LocalStorage</span>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group transition-all duration-300">
+                <div class="p-6 space-y-3">
+                    <div class="flex justify-between items-center">
+                        <i class="fa-solid fa-folder-open text-2xl text-emerald-400"></i>
+                        <div class="flex gap-3">
+                            <a href="#" target="_blank" class="text-slate-400 hover:text-white transition-colors" title="GitHub Repository"><i class="fa-brands fa-github text-lg"></i></a>
+                            <a href="#" target="_blank" class="text-slate-400 hover:text-white transition-colors" title="Live Preview"><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Analytics Dashboard</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">A sleek dashboard web interface crafted for monitoring real-time metrics and modern analytics.</p>
+                </div>
+                <div class="px-6 pb-6 pt-2 flex flex-wrap gap-2 text-xs font-mono text-emerald-300">
+                    <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20">UI/UX</span>
+                    <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20">CSS Grid</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Friends / Network Section -->
+    <section id="friends" class="py-16 px-4 lg:px-12 max-w-7xl mx-auto w-full">
+        <div class="text-center md:text-left mb-12">
+            <h2 class="text-3xl font-bold text-white mb-2 flex items-center justify-center md:justify-start gap-3">
+                <i class="fa-solid fa-user-group text-blue-500 text-2xl"></i>
+                <span>Friends & Connections</span>
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base">Fellow developers and close friends (Editable placeholders)</p>
+        </div>
+
+        <!-- Uniform Grid of Friends Cards -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            
+            <!-- Friend Template Card -->
+            <div class="glass-card rounded-xl p-4 flex flex-col items-center text-center group transition-all duration-300 hover:-translate-y-1">
+                <div class="w-16 h-16 rounded-full overflow-hidden mb-3 border-2 border-slate-700 group-hover:border-blue-500 transition-colors">
+                    <img src="Osama.png" alt="Friend" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">Osamsa</h4>
+                <p class="text-xs text-slate-400 mt-1">Engineer & Developer</p>
+                <a href="http://t.me/oa9bb" target="_blank" class="mt-3 text-xs text-blue-400 hover:underline" title="Profile Link"><i class="fa-solid fa-link"></i></a>
+            </div>
+
+            <!-- Friend Template Card -->
+            <div class="glass-card rounded-xl p-4 flex flex-col items-center text-center group transition-all duration-300 hover:-translate-y-1">
+                <div class="w-16 h-16 rounded-full overflow-hidden mb-3 border-2 border-slate-700 group-hover:border-blue-500 transition-colors">
+                    <img src="adamhelal.png" alt="Friend" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">Adam</h4>
+                <p class="text-xs text-slate-400 mt-1">     Doctor & Developer</p>
+                <a href="https://wa.me/201000649227" target="_blank" class="mt-3 text-xs text-blue-400 hover:underline" title="Profile Link"><i class="fa-solid fa-link"></i></a>
+            </div>
+
+            <!-- Friend Template Card -->
+            <div class="glass-card rounded-xl p-4 flex flex-col items-center text-center group transition-all duration-300 hover:-translate-y-1">
+                <div class="w-16 h-16 rounded-full overflow-hidden mb-3 border-2 border-slate-700 group-hover:border-blue-500 transition-colors">
+                    <img src="Adelhamdy.png" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">Adel</h4>
+                <p class="text-xs text-slate-400 mt-1">Mathematics Stream Student</p>
+                <a href="https://wa.me/201090372792" target="_blank" class="mt-3 text-xs text-blue-400 hover:underline" title="Profile Link"><i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="border-t border-slate-800/80 py-8 px-4 lg:px-12 bg-slate-950/50 mt-12">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div>
+                <p class="text-sm text-slate-400">
+                    &copy; <span id="year"></span> Abdullah El-Deeb. All rights reserved.
+                </p>
+            </div>
+            
+            <div class="flex items-center gap-3 flex-wrap justify-center">
+                <a href="#" target="_blank" class="text-slate-400 hover:text-blue-400 text-lg transition-colors" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" target="_blank" class="text-slate-400 hover:text-white transition-colors flex items-center" title="Twitter / X">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="#" target="_blank" class="text-slate-400 hover:text-white text-lg transition-colors" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" target="_blank" class="text-slate-400 hover:text-blue-500 text-lg transition-colors" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" target="_blank" class="text-slate-400 hover:text-rose-500 text-lg transition-colors" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" target="_blank" class="text-slate-400 hover:text-indigo-400 text-lg transition-colors" title="Discord"><i class="fa-brands fa-discord"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Automatic Dynamic Year Set
+        document.getElementById('year').innerText = new Date().getFullYear();
+    </script>
+</body>
+</html>
